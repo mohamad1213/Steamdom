@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>School-STEAMDOM</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <a class="navbar-brand" href="">STEAMDOM</a>
+    <li class="nav-item">
+      <a class="navbar-brand" href="/">HOME</a>
+      <a class="navbar-brand" href="/initiation">School Initation</a>
+      <a class="navbar-brand" href="/teachers">Teacher Database</a>
+    </li>
+    <li class="nav-item dropdown">
+        <a class="navbar-brand nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Operating Standart
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Content Standart</a>
+          <a class="dropdown-item" href="/competency_standard">Competency Standart</a>
+          <a class="dropdown-item" href="#">Academic Staff Standard</a>
+          <a class="dropdown-item" href="#">Learning Process Standard</a>
+          <a class="dropdown-item" href="#">Learning Assessment Standard</a>
+          <a class="dropdown-item" href="#">School Management Standard</a>
+          <a class="dropdown-item" href="#">Financial Standard</a>
+          <a class="dropdown-item" href="#">School Infrastructure Standard</a>
+        </div>
+      </li>
+  </nav><br>
+
+  {% block content %}
+  {% endblock %}
+
+</body>
+</html>

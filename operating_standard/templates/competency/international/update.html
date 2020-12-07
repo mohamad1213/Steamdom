@@ -1,0 +1,69 @@
+{% extends 'index.html' %}
+{% block content %}
+  <div class="container">
+
+    <h4>Edit School Data</h4>
+
+    <form method="POST" actions="" class="mt-3">
+      {% csrf_token %}
+
+      <br>
+      <table class="table table-striped">
+
+        <tr>
+          <td><b>Nama Sekolah</b></td>
+          <td><input type="text" name="school_name" value="{{data.school_name}}" class="form-control"></td>
+        </tr>
+        <tr>
+          <td><b>No. Statistik Sekolah (NSS)</b></td>
+          <td><input type="text" name="nss" value="{{data.nss}}" class="form-control"></td>
+        </tr>
+        <tr>
+          <td><b>Nomor Pokok Sekolah Nasional</b></td>
+          <td><input type="text" name="npsn" value="{{data.npsn}}" class="form-control"></td>
+        </tr>
+        <tr>
+          <td><b>Tipe Sekolah</b></td>
+          <td><input type="" name="school_type" value="{{data.school_type}}" class="form-control"></td>
+        </tr>
+        <tr>
+          <td><b>Alamat Sekolah</b></td>
+          <td><input type="text" name="school_address_street" value="{{data.school_address_street}}" class="form-control"></td>
+        </tr>
+        <tr>
+          <td><b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Kecamatan</b></td>
+          <td><input type="text" name="school_address_district" value="{{data.school_address_district}}" class="form-control"></td>
+        </tr>
+        <tr>
+          <td><b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Kabupaten/Kota</b></td>
+          <td><input type="text" name="school_address_city" value="{{data.school_address_city}}" class="form-control"></td>
+        </tr>
+        <tr>
+          <td><b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Provinsi</b></td>
+          <td><input type="text" name="school_address_province" value="{{data.school_address_province}}" class="form-control"></td>
+        </tr>
+        <tr>
+          <td><b>Telepon / HP / Fax</b></td>
+          <td><input type="text" name="telephone" value="{{data.telephone}}" class="form-control"></td>
+        </tr>
+        <tr>
+          <td><b>Website</b></td>
+          <td><input type="text" name="website" value="{{data.website}}" class="form-control"></td>
+        </tr>
+        <tr>
+          <td><b>E-Mail</b></td>
+          <td><input type="email" name="email" value="{{data.email}}" class="form-control"></td>
+        </tr>
+        <tr>
+          <td><b>Status Sekolah</b></td>
+          <td><input type="text" name="school_status" value="{{data.school_status}}" class="form-control"></td>
+        </tr>
+        <tr>
+          <td><b>Nilai Akreditasi Sekolah</b></td>
+          <td><input type="text" name="acreditation_score" value="{{data.acreditation_score}}" class="form-control"></td>
+        </tr>
+      </table>
+      <button class="btn btn-primary mt-1">Simpan</button>
+    </form>
+  </div>
+  {% endblock %}

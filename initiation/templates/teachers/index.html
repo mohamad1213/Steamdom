@@ -1,0 +1,50 @@
+{% extends 'index.html' %}
+{% block content %}
+    </nav><br>
+    <div class="container">
+        <a type="button" class="btn btn-primary" href="input/">Input</a>
+        <br>
+        <br>
+        <table class="table table-striped">
+            <thead>
+                <tr style="background-color: #625f53; color: aliceblue;">
+                    <th>NIP</th>
+                    <th>Nama</th>
+                    <th>course</th>
+                    <th>Birth Place</th>
+                    <th>Birth Date</th>
+                    <th>Gender</th>
+                    <th>Status</th>
+                    <th>Address</th>
+                    <th>Mobile Phone</th>
+                    <th>Golongan</th>
+                    <th>certificate Number</th>
+                    <th>Educational Qualification</th>
+                    <th>University</th>
+                </tr>
+            </thead>
+
+            {% for d in data %}
+            <tr>
+                <td>{{forloop.counter}}</td>
+                <td>{{d.nip}}</td>
+                <td>{{d.name}}</td>
+                <td>{{d.course}}</td>
+                <td>{{d.birth_place}}</td>
+                <td>{{d.birth_date}}</td>
+                <td>{{d.gender}}</td>
+                <td>{{d.address}}</td>
+                <td>{{d.mobile_phone}}</td>
+                <td>{{d.golongan}}</td>
+                <td>{{d.certificate_number}}</td>
+                <td>{{d.educational_qualifications}}</td>
+                <td>{{d.niversity}}</td>
+
+                <a type="button" class="btn btn-success" href="/teachers/{{d.id}}">Detail</a>
+                <a type="button" class="btn btn-warning" href="/teachers/{{d.id}}/update">Edit</a>
+                <a type="button" class="btn btn-danger" href="/teachers/{{d.id}}/delete">Hapus</a>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    {% endblock %}

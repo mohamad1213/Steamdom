@@ -1,0 +1,46 @@
+{% extends 'index.html' %}
+{% block content %}
+</nav><br>
+<div class="container-fluid">
+    <a type="button" class="btn btn-primary" href="input/">Input Competency</a>
+    <br>
+    <br>
+    <div class="responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr style="background-color: #625f53; color: aliceblue;">
+                    <th>No</th>
+                    <th>Country</th>
+                    <th>Code</th>
+                    <th>Year Issued</th>
+                    <th>Subject</th>
+                    <th>level</th>
+                    <!-- <th>Basic Competencies</th>
+                    <th>Core Competency</th> -->
+                    <th>Deskripsi</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            {% for d in data %}
+            <tr>
+                <td>{{forloop.counter}}</td>
+                <td>{{d.country_of_origin_international}}</td>
+                <td>{{d.title_international}}</td>
+                <td>{{d.year_of_curriculum_international}}</td>
+                <td>{{d.subject_international}}</td>
+                <td>{{d.level_international}}</td>
+                <!-- <td>{{d.kompetensi_inti_international}}</td>
+                <td>{{d.kompetensi_dasar_international}}</td> -->
+                <td>{{d.content_international}}</td>
+                <td>
+                    <a type="button" class="btn btn-success" href="/competency_international/{{d.id}}">Detail</a>
+                    <a type="button" class="btn btn-warning" href="/competency_international/{{d.id}}/update">Edit</a>
+                    <a type="button" class="btn btn-danger" href="/competency_international/{{d.id}}/delete">Hapus</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+{% endblock %}

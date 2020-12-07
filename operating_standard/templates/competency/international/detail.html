@@ -1,0 +1,72 @@
+{% extends 'index.html' %}
+{% block content %}
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Brand/logo -->
+    <a class="navbar-brand" href="">GIG-FILM</a>
+    <li class="nav-item">
+      <a class="navbar-brand" href="/input">INPUT FIM</a>
+    </li>
+  </nav><br>
+  <div class="container">
+
+    <p align="right"> 
+      <a onclick="goBack()" type="button" class="btn btn-primary mt-1" href="/initiation/">Back</a>
+      <br>
+      <table class="table table-dark">
+          <tr>
+              <td><b>Nama Sekolah</b></td>
+              <td>{{data.school_name}}</td>
+          </tr>
+          <tr>
+              <td><b>No. Statistik Sekolah (NSS)</b></td>
+              <td>{{data.nss}}</td>
+          </tr>
+          <tr>
+              <td><b>Nomor Pokok Sekolah Nasional</b></td>
+              <td>{{data.npsn}}</td>
+          </tr>
+          <tr>
+              <td><b>Tipe Sekolah</b></td>
+              <td>{{data.school_type}}</td>
+          </tr>
+          <tr>
+              <td><b>Alamat Sekolah</b></td>
+              <td>{{data.school_address_street}}</td>
+          </tr>
+          <tr>
+              <td><b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Kecamatan</b></td>
+              <td>{{data.school_address_district}}</td>
+          </tr>
+          <tr>
+              <td><b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Kabupaten/Kota</b></td>
+              <td>{{data.school_address_city}}</td>
+          </tr>
+          <tr>
+              <td><b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Provinsi</b></td>
+              <td>{{data.school_address_province}}</td>
+          </tr>
+          <tr>
+              <td><b>Telepon / HP / Fax</b></td>
+              <td>{{data.telephone}}</td>
+          </tr>
+          <tr>
+              <td><b>Website</b></td>
+              <td>{{data.website}}</td>
+          </tr>
+          <tr>
+              <td><b>E-Mail</b></td>
+              <td>{{data.email}}</td>
+          </tr>
+          <tr>
+              <td><b>Status Sekolah</b></td>
+              <td>{{data.school_status}}</td>
+          </tr>
+          <tr>
+              <td><b>Nilai Akreditasi Sekolah</b></td>
+              <td>{{data.acreditation_score}}</td>
+          </tr>
+        
+      </table>
+      
+  </div>
+{% endblock %}
